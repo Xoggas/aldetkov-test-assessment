@@ -1,14 +1,17 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [CreateAssetMenu(fileName = "New Item Data", menuName = "Data/Lootbox Item Data", order = 0)]
 public class LootboxItemData : ScriptableObject
 {
-    public Sprite Icon => _icon;
-    public Color RarityColor => _rarityColor;
+    public Sprite Icon => icon;
+    public Color RarityColor => rarityColor;
 
     [SerializeField]
-    private Sprite _icon;
+    [FormerlySerializedAs("_icon")]
+    private Sprite icon;
 
     [SerializeField]
-    private Color _rarityColor = Color.white;
+    [FormerlySerializedAs("_rarityColor")]
+    private Color rarityColor = Color.white;
 }

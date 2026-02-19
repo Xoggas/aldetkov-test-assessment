@@ -1,6 +1,7 @@
 using AxGrid.Base;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public sealed class LootboxItemView : MonoBehaviourExt
@@ -11,16 +12,18 @@ public sealed class LootboxItemView : MonoBehaviourExt
     {
         set
         {
-            _icon.sprite = value.Icon;
-            _rarityBar.color = value.RarityColor;
+            icon.sprite = value.Icon;
+            rarityBar.color = value.RarityColor;
         }
     }
 
     [SerializeField]
-    private Image _icon;
+    [FormerlySerializedAs("_icon")]
+    private Image icon;
 
     [SerializeField]
-    private Image _rarityBar;
+    [FormerlySerializedAs("_rarityBar")]
+    private Image rarityBar;
 
     [OnAwake]
     private void OnAwake()
