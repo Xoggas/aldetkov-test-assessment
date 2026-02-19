@@ -38,9 +38,9 @@ public class InfiniteScroller : MonoBehaviourExtBind
     [OnAwake]
     private void OnAwake()
     {
-        content.sizeDelta = new Vector2(childSize, childSize * (items.Count + 1));
+        content.sizeDelta = new Vector2(childSize, childSize * 4);
 
-        for (var i = 0; i < items.Count + 1; i++)
+        for (var i = 0; i < 4; i++)
         {
             var child = Instantiate(prefab, content);
             child.gameObject.SetActive(true);
