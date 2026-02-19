@@ -19,7 +19,7 @@ public class LootboxStateMachine : MonoBehaviourExt
     [OnStart]
     private void StartFsm()
     {
-        Settings.Fsm.Start("Idle");
+        Settings.Fsm.Start(States.Idle);
     }
 
     [OnUpdate]
